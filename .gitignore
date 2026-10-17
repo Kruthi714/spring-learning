@@ -6,3 +6,4 @@ Servers/
 .env
 .env.*
 !.env.example
+**/.metadata/

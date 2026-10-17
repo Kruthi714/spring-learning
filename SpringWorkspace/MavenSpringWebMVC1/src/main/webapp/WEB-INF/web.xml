@@ -1,0 +1,64 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>myds</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>myds</servlet-name>
+  <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>
+<!-- ctrl+shift+t-to  identify the package -->
+
+
+<!-- 
+Complete Flow
+index.jsp
+     |
+     |
+User clicks
+     |
+     V
+/hellopage
+     |
+     V
+web.xml
+     |
+     V
+DispatcherServlet
+     |
+     V
+myds-servlet.xml
+     |
+     V
+@Component Scan
+     |
+     V
+@Controller found
+     |
+     V
+@GetMapping("/hellopage")
+     |
+     V
+openHelloPage()
+     |
+     V
+ModelAndView
+(view="hello")
+     |
+     V
+DispatcherServlet
+     |
+     V
+ViewResolver
+     |
+     V
+/WEB-INF/View/hello.jsp
+     |
+     V
+Browser -->
