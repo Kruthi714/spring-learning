@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<h1 th:text="'Welcome : '+ ${user_name}"></h1>
+		<a href="index.html">Home</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		<a th:href="@{/logout}">Logout</a>
+	</body>
+</html>

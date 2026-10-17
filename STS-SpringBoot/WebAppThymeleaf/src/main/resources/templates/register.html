@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<h1>Registration page</h1>
+	<div th:if="${success_msg}">
+		<span style="color:green" th:text="${success_msg}"></span>
+	</div>
+	<div th:if="${error_msg}">
+		<span style="color:red" th:text="${error_msg}"></span>
+	</div>
+	<form th:action="@{/regForm}" th:object="${user}" method="post">
+		Name: <input type="text" th:field="*{name}" /><br /><br />
+		Email Id: <input type="text" th:field="*{email}" /><br /><br />
+		Password: <input type="password" th:field="*{password}" /><br /><br />
+		PhoneNo: <input type="text" th:field="*{phoneno}" /><br /><br />
+		<input type="submit" value="Register" />
+	</form>
+	<a href="index.html">Home</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<a th:href="@{/logPage}">If Already Registered Login</a>
+</body>
+
+</html>
+
+
+<!--th:field="*{name}"//it shld be the same as attributes in User-->

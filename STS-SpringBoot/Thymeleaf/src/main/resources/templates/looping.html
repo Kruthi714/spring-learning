@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<h1>Looping(each)</h1>
+		<ul>
+			<li th:each="no:${model_no}">
+				<span th:text="${no}"></span>
+			</li>
+		</ul>
+	</body>
+</html>
